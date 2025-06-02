@@ -20,7 +20,7 @@ def load_config():
 
 def authenticate_spotify():
     config = load_config()
-    scope = "playlist-read-private playlist-read-public playlist-modify-private"
+    scope = "playlist-read-private playlist-modify-private"
     sp_oauth = SpotifyOAuth(
         client_id=config["SPOTIPY_CLIENT_ID"],
         client_secret=config["SPOTIPY_CLIENT_SECRET"],
