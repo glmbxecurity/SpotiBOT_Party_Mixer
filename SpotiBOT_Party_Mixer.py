@@ -7,7 +7,7 @@ import datetime
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-AUTHORIZED_USER_ID = 942135888  # Cambia por tu ID
+AUTHORIZED_USER_IDS = {942135888, 742135544}  # Agrega los IDS de usuarios autorizados a usar el bot, separados por comas
 
 def load_config():
     config = {}
@@ -40,7 +40,7 @@ def authenticate_spotify():
     return sp
 
 def is_authorized_user(update: Update):
-    return update.message.from_user.id == AUTHORIZED_USER_ID
+    return update.message.from_user.id in AUTHORIZED_USER_IDS
 
 def get_playlist_tracks(sp, playlist_id):
     tracks = []
