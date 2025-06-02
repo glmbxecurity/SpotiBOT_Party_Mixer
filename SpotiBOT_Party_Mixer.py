@@ -108,7 +108,7 @@ async def combine_playlists(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         new_name = "Combinada " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
         new_playlist = sp.user_playlist_create(user_id, new_name, public=False,
-                                               description="Playlist combinada creada con SpotiBOT")
+                                               description="Playlist combinada creada con SpotiBOT Party Mixer")
 
         batch_size = 100
         for i in range(0, len(track_uris), batch_size):
